@@ -19,7 +19,7 @@ print(end - start)'''  #0:00:07.063824
 if __name__ == '__main__':
     start = datetime.datetime.now()
     with multiprocessing.Pool(processes=4) as pool:
-        pool = map(read_info, file_list)
+        pool.map(read_info, file_list)
     end = datetime.datetime.now()
     print(end - start) #0:00:00.248108
 
